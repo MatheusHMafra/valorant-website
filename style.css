@@ -1,0 +1,115 @@
+/* Html */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,button,input,optgroup,select,textarea {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho e Navegação Contêiner */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Cabeçalho - Título */
+header h1 {
+    font-size: 32px;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+    box-shadow: 0 0 5px rgba(148, 148, 148, 0.5);
+}
+
+/* Seção principal */
+section {
+    background-image: url("imagens/blob.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    margin-top: 0;
+}
+
+/* Corpo */
+body {
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Título da seção */
+section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+/* Parágrafos na seção */
+section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
