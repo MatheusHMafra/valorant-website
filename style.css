@@ -1,13 +1,13 @@
 :root {
     --primary-color: #e0dfda;
     --secondary-color: #ff4655;
-    --text-color: #e0dfda;
+    --text-color: #1d1d1d;
 }
 
 body.dark-mode {
     --primary-color: #1d1d1d;
     --secondary-color: #2c2c2c;
-    --text-color: #e0dfda;
+    --text-color: #ffffff;
 }
 
 
