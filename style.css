@@ -138,14 +138,14 @@ body {
 
 /* Título da seção */
 section h2 {
-    color: var(--primary-color);
+    color: var(--texte-color);
     font-size: 24px;
     margin-top: 0;
 }
 
 /* Parágrafos na seção */
 section p {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 16px;
     line-height: 1.5;
 }
