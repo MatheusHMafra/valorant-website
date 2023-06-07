@@ -138,7 +138,7 @@ body {
 
 /* Título da seção */
 section h2 {
-    color: var(--texte-color);
+    color: var(--text-color);
     font-size: 24px;
     margin-top: 0;
 }
