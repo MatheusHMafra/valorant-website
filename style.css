@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #ff4352;
+    --secondary-color: #0e1623;
+    --text-color: #e0dfda;
+}
+
+
 /* Html */
 html {
     font-size: 16px;
