@@ -11,33 +11,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <!-- Adicionar pure direto do github https://github.com/pure-css/pure/-->
 </head>
 
 <body>
-    <div class="header-container">
-        <header>
-            <h1>Meu Site</h1>
+    <section>
+        <video autoplay="autoplay" loop="loop" preload="true" muted="" playsinline=""
+            poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg">
+            <source
+                src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4"
+                type="video/mp4">
+        </video>
+        <h2 style="color: white; font-family: 'VALORANT', sans-serif; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">VALORANT
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href=#>Sobre</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#" class="menu-dropdown-link">Contact</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Agentes</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Arsenal</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Mapas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href=#>Download</a></li>
                 </ul>
             </nav>
-        </header>
-    </div>
-
-    <section>
-        <video preload="true" muted="" loop="" playsinline="" poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg" data-testid="hero:video"><source src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4" type="video/mp4"></video>
-        <h2 style="font-size: 34px;font-family: 'VALORANT', sans-serif;">VALORANT</h2>
+        </h2>
         <p>Um jogo de tiro tático 5x5 com personagens originais</p>
-        
+
     </section>
-    
+
     <footer>
-        <p>&copy; 2023 Riot Games, Inc. Riot Games, VALORANT e qualquer logotipo associado são marcas comerciais, marcas de serviço e/ou marcas registradas da Riot Games, Inc.</p>
+        <p>&copy; 2023 Riot Games, Inc. Riot Games, VALORANT e qualquer logotipo associado são marcas comerciais, marcas
+            de serviço e/ou marcas registradas da Riot Games, Inc.</p>
     </footer>
 
     <script src="script.js"></script>
