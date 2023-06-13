@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #e0dfda;
-    --secondary-color: #ff4655;
+    --primary-color: #ffffff;
+    --secondary-color: whitesmoke;
     --text-color: #1d1d1d;
     --secondary-text-color: #ffffff;
 }
@@ -12,6 +12,13 @@ body.dark-mode {
     --secondary-text-color: #1d1d1d;
 }
 
+/* Estilos para o corpo */
+body {
+    background-color: var(--secondary-color);
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
 
 /* Html */
 html {
@@ -26,18 +33,104 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body,button,input,optgroup,select,textarea {
+/* Estilos para texto */
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: 100%;
     font-weight: 400;
 }
 
-body,h1,h2,h3,h4,h5,h6,html,iframe,li,ol,p,textarea,ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+li,
+ol,
+p,
+textarea,
+ul {
     margin: 0;
     padding: 0;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilos para a seção título */
+.titulo {
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+
+/* Estilos para o vídeo */
+.titulo video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Estilos para o texto */
+.titulo h2 {
+    font-weight: bold;
+    color: red;
+    font-family: 'VALORANT', sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.titulo p {
+    font-weight: bold;
+    margin-top: 0.1%;
+    color: red;
+    font-family: 'VALORANT', sans-serif;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Estilos para o dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    transform: translate(-11%, 0);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Cabeçalho e Contêiner de Navegação */
@@ -45,14 +138,13 @@ body,h1,h2,h3,h4,h5,h6,html,iframe,li,ol,p,textarea,ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 /* Cabeçalho */
 header {
-    background-color: var(--primary-color);
+    background-color: whitesmoke;
     color: var(--text-color);
-    padding: 20px;
     margin-bottom: 0;
     text-align: center;
 }
@@ -76,40 +168,36 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--secondary-text-color);
+    font-weight: bold;
+    color: red;
     text-decoration: none;
     font-size: 20px;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
 }
 
 nav ul li a:hover {
     color: var(--secondary-text-color);
-    box-shadow: 0 0 5px rgba(148, 148, 148, 0.5);
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+    box-shadow: 0 0 5px var(--hover-color);
 }
 
 /* Seção principal */
 section {
-    background-image: url("imagens/blob.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: var(--secondary-color);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 20px;
     margin-top: 0;
 }
 
-/* Corpo */
-body {
-    line-height: 1.5;
-    margin: 0;
-    text-align: center;
-}
-
 /* Título da seção */
 section h2 {
     color: var(--text-color);
-    font-size:64px;
+    font-size: 64px;
     margin-top: 0;
 }
 
@@ -120,52 +208,74 @@ section p {
     line-height: 1.5;
 }
 
+/* Estilos para a descrição */
+.description {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.description h1 {
+    font-size: 32px;
+}
+
+.description h3 {
+    font-size: 18px;
+}
+
 /* Rodapé */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 10px;
     text-align: center;
     font-size: 14px;
 }
 
-/* Nav dropdown */
-
-/* Submenus should still be display: block; */
-.pure-menu-item{
-    display: block;
+@media screen and (max-width: 1580px) {
+    .titulo p {
+        margin-top: 1%;
+    }
 }
 
-.pure-menu-children {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 3;
+/* Arrumar tela */
+@media screen and (max-width: 1280px) {
+    .titulo p {
+        margin-top: 3%;
+    }
 }
 
-.pure-menu-horizontal .pure-menu-children {
-    left: 0;
-    top: auto;
-    width: inherit;
+@media screen and (max-width: 920px) {
+    .titulo p {
+        margin-top: 5%;
+    }
 }
 
-.pure-menu-allow-hover:hover > .pure-menu-children,
-.pure-menu-active > .pure-menu-children {
-    display: block;
-    position: absolute;
-}
+/* Mobile */
+@media screen and (max-width: 680px) {
+    .titulo p {
+        margin-top: 7%;
+        font-size: 13px;
+    }
 
-/* Vertical Menus - show the dropdown arrow */
-.pure-menu-has-children > .pure-menu-link:after {
-    padding-left: 0.5em;
-    content: "\25B8";
-    font-size: small;
-}
+    .titulo h2 {
+        font-size: 40px;
+    }
 
-/* Horizontal Menus - show the dropdown arrow */
-.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after {
-    content: "\25BE";
+    header h1 {
+        font-size: 22px;
+    }
+
+    .description h1 {
+        font-size: 22px;
+    }
+
+    .description h3 {
+        font-size: 12px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
 }

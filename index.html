@@ -15,46 +15,71 @@
 </head>
 
 <body>
-    <section>
-        <video autoplay="autoplay" loop="loop" preload="true" muted="" playsinline=""
-            poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg">
-            <source
-                src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4"
-                type="video/mp4">
-        </video>
-        <h2 style="color: white; font-family: 'VALORANT', sans-serif; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">VALORANT
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href=#>Sobre</a></li>
-                    <li class="menu-dropdown">
-                        <a href="#" class="menu-dropdown-link">Contact</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item">
-                                <a href="#" class="pure-menu-link">Agentes</a>
-                            </li>
-                            <li class="pure-menu-item">
-                                <a href="#" class="pure-menu-link">Arsenal</a>
-                            </li>
-                            <li class="pure-menu-item">
-                                <a href="#" class="pure-menu-link">Mapas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href=#>Download</a></li>
-                </ul>
-            </nav>
-        </h2>
-        <p>Um jogo de tiro tático 5x5 com personagens originais</p>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li class="dropdown">
+                    <a href="#">Informações</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Agentes</a></li><br>
+                        <li><a href="#">Arsenal</a></li><br>
+                        <li><a href="#">Modos de Jogo</a></li><br>
+                        <li><a href="#">Mapas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="titulo">
+        <div class="video-container">
+            <video autoplay="autoplay" loop="loop" preload="true" muted="" playsinline=""
+                poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg">
+                <source
+                    src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4"
+                    type="video/mp4">
+            </video>
+            <h2>vALORanT</h2>
+            <p>Um jogo de tiro tático 5x5 com personagens originais</p>
+        </div>
     </section>
-
+    <br>
+    <section class="description">
+        <h1>NÓS SOMOS VALORANT</h1>
+        <h3>
+            DESAFIE SEUS LIMITES
+            Misture o seu estilo e experiência em um cenário global e competitivo. Você terá 13 rodadas para atacar e
+            defender com disparos certeiros e habilidades táticas. Com apenas uma vida por rodada, você deve pensar mais
+            rápido que o oponente se quiser sobreviver. Encare inimigos nos modos Competitivo e Sem Ranque, além da
+            Disputa da Spike e do Mata-Mata!
+            <br>
+            <a href="https://playvalorant.com/pt-br/news/announcements/beginners-guide/"><strong>CONHEÇA O
+                    JOGO</strong></a>
+        </h3>
+        <br>
+        <h1>SEUS AGENTES</h1>
+        <h3>
+            A CRIATIVIDADE É SUA MELHOR ARMA.
+            Mais do que armas e munição, VALORANT inclui agentes com habilidades adaptativas, rápidas e letais, que
+            criam oportunidades para você exibir sua mecânica de tiro. Cada Agente é único, assim como os momentos de
+            destaque de cada partida!
+            <br>
+            <a href="#">TODOS OS AGENTES</a>
+        </h3>
+    </section>
+    <br>
     <footer>
         <p>&copy; 2023 Riot Games, Inc. Riot Games, VALORANT e qualquer logotipo associado são marcas comerciais, marcas
             de serviço e/ou marcas registradas da Riot Games, Inc.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function darkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 
 </html>
