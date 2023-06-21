@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: whitesmoke;
+    --primary-color: white;
+    --secondary-color: white;
     --text-color: #1d1d1d;
-    --secondary-text-color: #ffffff;
+    --secondary-text-color: white;
 }
 
 body.dark-mode {
     --primary-color: #1d1d1d;
     --secondary-color: #2c2c2c;
-    --text-color: #ffffff;
+    --text-color: white;
     --secondary-text-color: #1d1d1d;
 }
 
@@ -22,57 +22,10 @@ body {
 
 /* Html */
 html {
-    -webkit-font-smoothing: antialiased;
-    min-width: 300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Estilos para texto */
-
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 100%;
-    font-weight: 400;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-html,
-iframe,
-li,
-ol,
-p,
-textarea,
-ul {
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-}
-
 a {
     text-decoration: none;
 }
@@ -95,6 +48,7 @@ a {
 
 /* Estilos para o texto */
 .titulo h2 {
+    font-size: clamp(16px, 4vw, 64px);
     font-weight: bold;
     color: red;
     font-family: 'VALORANT', sans-serif;
@@ -105,6 +59,7 @@ a {
 }
 
 .titulo p {
+    font-size: clamp(12px, 2vw, 16px);
     font-weight: bold;
     margin-top: 0.1%;
     color: red;
@@ -115,74 +70,18 @@ a {
     transform: translate(-50%, 0);
 }
 
-/* Estilos para o dropdown menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    transform: translate(-11%, 0);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Cabeçalho e Contêiner de Navegação */
-.header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
-}
-
 /* Cabeçalho */
 header {
-    background-color: whitesmoke;
+    margin: 5px auto 5px auto;
+    width: 100%;
+    background-color: var(--secondary-color);
     color: var(--text-color);
-    margin-bottom: 0;
     text-align: center;
 }
 
 /* Cabeçalho - Título */
 header h1 {
-    font-size: 32px;
-}
-
-/* Navegação */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    font-weight: bold;
-    color: red;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
-}
-
-nav ul li a:hover {
-    color: var(--secondary-text-color);
-    text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
-    box-shadow: 0 0 5px var(--hover-color);
+    font-size: clamp(20px, 4vw, 32px);
 }
 
 /* Seção principal */
@@ -197,14 +96,14 @@ section {
 /* Título da seção */
 section h2 {
     color: var(--text-color);
-    font-size: 64px;
+    font-size: clamp(16px, 4vw, 64px);
     margin-top: 0;
 }
 
 /* Parágrafos na seção */
 section p {
     color: var(--text-color);
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
     line-height: 1.5;
 }
 
@@ -217,65 +116,18 @@ section p {
 }
 
 .description h1 {
-    font-size: 32px;
+    font-size: clamp(20px, 4vw, 32px);
 }
 
-.description h3 {
-    font-size: 18px;
+.description p {
+    font-size: clamp(12px, 2vw, 16px);
 }
 
 /* Rodapé */
 footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 10px;
+    margin: 10px 10px 20px 10px;
     text-align: center;
-    font-size: 14px;
-}
-
-@media screen and (max-width: 1580px) {
-    .titulo p {
-        margin-top: 1%;
-    }
-}
-
-/* Arrumar tela */
-@media screen and (max-width: 1280px) {
-    .titulo p {
-        margin-top: 3%;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .titulo p {
-        margin-top: 5%;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 680px) {
-    .titulo p {
-        margin-top: 7%;
-        font-size: 13px;
-    }
-
-    .titulo h2 {
-        font-size: 40px;
-    }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    .description h1 {
-        font-size: 22px;
-    }
-
-    .description h3 {
-        font-size: 12px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
+    font-size: clamp(12px, 2vw, 14px);
 }
