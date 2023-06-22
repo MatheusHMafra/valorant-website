@@ -131,3 +131,9 @@ footer {
     text-align: center;
     font-size: clamp(12px, 2vw, 14px);
 }
+
+/* Estilo lista */
+.card-content {
+    padding: 0;
+    margin: 3px 3px 3px 3px;
+}
