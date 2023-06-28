@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FFFFFF;
+    --text-color: #1D1D1D;
+    --secondary-text-color: #FFFFFF;
+}
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilos para o corpo */
+body {
+    background-color: var(--secondary-color);
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+/* Html */
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Estilos para texto */
+a {
+    text-decoration: none;
+}
+
+/* Cabeçalho */
+header {
+    margin: 5px auto 5px auto;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Cabeçalho - Título */
+header h1 {
+    font-size: clamp(20px, 4vw, 32px);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+/* */
+.category-title {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weapon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.weapon-image {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.weapon-name {
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+/* CSS
+.weapon-image {
+    height: auto;
+    margin-right: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+*/

@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FFFFFF;
+    --text-color: #1D1D1D;
+    --secondary-text-color: #FFFFFF;
+}
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilos para o corpo */
+body {
+    background-color: var(--secondary-color);
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+/* Html */
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Estilos para texto */
+a {
+    text-decoration: none;
+}
+
+/* Cabeçalho */
+header {
+    margin: 5px auto 5px auto;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Cabeçalho - Título */
+header h1 {
+    font-size: clamp(20px, 4vw, 32px);
+}
+
+/* Estilo lista */
+.container {
+    padding: 20px;
+}
+
+.map-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 620px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.map-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.map-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.map-details {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.map-details h3 {
+    font-size: clamp(20px, 4vw, 32px);
+    margin-bottom: 10px;
+}
+
+.map-details p {
+    font-size: clamp(12px, 2vw, 16px);
+    margin-bottom: 10px;
+}
+
+.carousel-button {
+    margin-top: 10px;
+}
+
+.map-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+@media (max-width: 768px) {
+    .map-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
