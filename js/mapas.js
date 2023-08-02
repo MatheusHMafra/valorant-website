@@ -117,6 +117,30 @@ var maps = [
         background: "imagens/maps/Loading_Screen_Lotus.webp",
         location: "Gates Ocidentais, Índia, Terra Omega",
         coordinates: "14°07'03\" N 74°53'21\" E",
+    },
+    {
+        name: "District",
+        image: "imagens/maps/District_minimap.webp",
+        audio: "audio/TDM.mpeg",
+        background: "imagens/maps/Loading_Screen_District.webp",
+        location: "Tóquio, Japão, Terra Omega",
+        coordinates: "35°41'23\" N 139°41'32\" E",
+    },
+    {
+        name: "Kasbah",
+        image: "imagens/maps/Kasbah_minimap.webp",
+        audio: "audio/TDM.mpeg",
+        background: "imagens/maps/Loading_Screen_Kasbah.webp",
+        location: "Rabat, Marrocos, Terra Omega",
+        coordinates: "34°2'0\" N 6°51'0\" W",
+    },
+    {
+        name: "Piazza",
+        image: "imagens/maps/Piazza_minimap.webp",
+        audio: "audio/TDM.mpeg",
+        background: "imagens/maps/Loading_Screen_Piazza.webp",
+        location: "Veneza, Itália, Terra Omega",
+        coordinates: "45°26'15\" N 12°20'9\" E",
     }
 ];
 
