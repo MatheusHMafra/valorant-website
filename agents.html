@@ -1,67 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <title>Valorant | Agentes</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Valorant Agent Info</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .agent-card {
+            max-width: 90%;
+            display: flex;
+            align-items: center;
+            margin: 50px auto 20px auto;
+            border: 1px solid whitesmoke;
+            padding: 10px;
+        }
+
+        .agent-card img {
+            max-width: 80px;
+            margin-right: 5px;
+            align-self: flex-start;
+        }
+
+        .agent-background {
+            flex-grow: 1;
+            padding: 10px;
+            color: whitesmoke;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar is-centered" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                    <img src="imagens/valorant.svg" alt="Valorant" width="48" height="48">
-                </a>
-                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-                <div class="navbar-menu" id="navMenu">
-                    <div class="navbar-start"><a class="navbar-item" href="index.html">Home</a>
-                        <a class="navbar-item" href="index.html#sobre">Sobre</a>
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                                Informações do Jogo
-                            </a>
-                            <div class="navbar-dropdown">
-                                <a href="agents.html" class="navbar-item">
-                                    Agentes
-                                </a>
-                                <a href="mapas.html" class="navbar-item">
-                                    Mapas
-                                </a>
-                                <a href="arsenal.html" class="navbar-item">
-                                    Arsenal
-                                </a>
-                            </div>
+    <h1>Playable Valorant Agents</h1>
+    <div id="agents-list"></div>
+
+    <script>
+        const agentsList = document.getElementById('agents-list');
+
+        // Fetch data from the API with the filter parameter
+        fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.data) {
+                    const agents = data.data;
+
+                    // Iterate through the playable agents and create HTML elements
+                    agents.forEach(agent => {
+                        const agentDiv = document.createElement('div');
+                        agentDiv.classList.add('agent-card');
+                        agentDiv.style.backgroundImage = `url(${agent.bustPortrait})`;
+                        agentDiv.style.backgroundColor = `rgba(0, 0, 0, 0.5)`;
+                        agentDiv.style.backgroundSize = 'contain';
+                        agentDiv.style.backgroundRepeat = 'no-repeat';
+
+                        const backgroundImage = `https://media.valorant-api.com/agents/${agent.uuid}/background.png`;
+                        const backgroundGradient = agent.backgroundGradientColors.join(', ');
+
+
+                        agentDiv.innerHTML = `
+                        <img src="${agent.displayIcon}" alt="${agent.displayName}">
+                        <div class="agent-background">
+                            <h2>${agent.displayName}</h2>
+                            <p>${agent.description}</p>
+                            <h3>Character Tags: ${agent.characterTags ? agent.characterTags.join(', ') : ''}</h3>
+                            <h3>Role: ${agent.role ? agent.role.displayName : ''}</h3>
+                            <h3>Background: <a href="${backgroundImage}" target="_blank">View Background</a></h3>
+                            <h3>Background Gradient Colors: ${backgroundGradient}</h3>
+                            <h3>Abilities:</h3>
+                            <ul>
+                            ${agent.abilities ? agent.abilities.map(ability => `
+                                <li>
+                                <h4>${ability.displayName}</h4>
+                                <p>${ability.description}</p>
+                                <img src="${ability.displayIcon}" alt="${ability.displayName}">
+                                </li>
+                            `).join('') : ''}
+                            </ul>
                         </div>
-                        <a class="navbar-item" href="https://playvalorant.com/pt-br/download/">Download</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <br>
-
-    <div class="main-content page-transition">
-        <div id="agents-container" class="box block">
-        </div>
-    </div>
-
-    <br>
-
-    <footer>
-        <p>&copy; 2023 Riot Games, Inc. Riot Games, VALORANT e qualquer logotipo associado são marcas comerciais, marcas
-            de serviço e/ou marcas registradas da Riot Games, Inc.</p>
-    </footer>
-    <script src="js/agents.js"></script>
+                        `;
+                        agentsList.appendChild(agentDiv);
+                    });
+                } else {
+                    console.error('No valid data found in response.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
 </body>
 
 </html>
