@@ -43,10 +43,9 @@
 
     <script>
         const agentsList = document.getElementById('agents-list');
-        const language = 'pt-BR';
 
         // Fetch data from the API with the filter parameter
-        fetch('https://valorant-api.com/v1/agents?language=${language}&isPlayableCharacter=true')
+        fetch('https://valorant-api.com/v1/agents?language=pt-BR&isPlayableCharacter=true')
             .then(response => response.json())
             .then(data => {
                 if (data && data.data) {
