@@ -43,15 +43,15 @@
 
     <script>
         const agentsList = document.getElementById('agents-list');
+        const language = 'pt-BR';
 
         // Fetch data from the API with the filter parameter
-        fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
+        fetch('https://valorant-api.com/v1/agents?language=${language}&isPlayableCharacter=true')
             .then(response => response.json())
             .then(data => {
                 if (data && data.data) {
                     const agents = data.data;
 
-                    // Iterate through the playable agents and create HTML elements
                     agents.forEach(agent => {
                         const agentDiv = document.createElement('div');
                         agentDiv.classList.add('agent-card');
